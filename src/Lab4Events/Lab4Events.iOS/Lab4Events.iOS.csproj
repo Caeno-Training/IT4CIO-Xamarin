@@ -94,11 +94,27 @@
     <ImageAsset Include="Assets.xcassets\Lab4Events.imageset\Lab4Events.png" />
     <ImageAsset Include="Assets.xcassets\Lab4Events.imageset\Lab4Events%40x.png" />
     <ImageAsset Include="Assets.xcassets\Lab4Events.imageset\Lab4Events%403x.png" />
+    <ImageAsset Include="Assets.xcassets\Logo_Google.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Logo_Google.imageset\Logo_Google%402x.png" />
+    <ImageAsset Include="Assets.xcassets\Logo_Facebook.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Logo_Facebook.imageset\Logo_Facebook%402x.png" />
+    <ImageAsset Include="Assets.xcassets\Logo_Linkedin.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Logo_Linkedin.imageset\Logo_LinkedIn%402x.png" />
+    <ImageAsset Include="Assets.xcassets\Likes.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Likes.imageset\Likes%402x.png" />
+    <ImageAsset Include="Assets.xcassets\Logo_Google.imageset\Logo_Google%403x.png" />
+    <ImageAsset Include="Assets.xcassets\Logo_Facebook.imageset\Logo_Facebook%403x.png" />
+    <ImageAsset Include="Assets.xcassets\Logo_Linkedin.imageset\Logo_LinkedIn%403x.png" />
+    <ImageAsset Include="Assets.xcassets\Likes.imageset\Likes%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
     <Folder Include="Assets.xcassets\Lab4Events.imageset\" />
     <Folder Include="ViewControllers\" />
+    <Folder Include="Assets.xcassets\Logo_Google.imageset\" />
+    <Folder Include="Assets.xcassets\Logo_Facebook.imageset\" />
+    <Folder Include="Assets.xcassets\Logo_Linkedin.imageset\" />
+    <Folder Include="Assets.xcassets\Likes.imageset\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />

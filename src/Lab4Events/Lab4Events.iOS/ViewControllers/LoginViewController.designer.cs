@@ -24,6 +24,18 @@ namespace Lab4Events.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton facebookButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton googleButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton linkedInButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton loginButton { get; set; }
 
         [Outlet]
@@ -44,6 +56,21 @@ namespace Lab4Events.iOS
             if (emailTextField != null) {
                 emailTextField.Dispose ();
                 emailTextField = null;
+            }
+
+            if (facebookButton != null) {
+                facebookButton.Dispose ();
+                facebookButton = null;
+            }
+
+            if (googleButton != null) {
+                googleButton.Dispose ();
+                googleButton = null;
+            }
+
+            if (linkedInButton != null) {
+                linkedInButton.Dispose ();
+                linkedInButton = null;
             }
 
             if (loginButton != null) {

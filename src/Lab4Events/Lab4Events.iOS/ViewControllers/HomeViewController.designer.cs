@@ -14,5 +14,8 @@ namespace Lab4Events.iOS
     [Register ("HomeViewController")]
     partial class HomeViewController
     {
+        void ReleaseDesignerOutlets ()
+        {
+        }
     }
 }

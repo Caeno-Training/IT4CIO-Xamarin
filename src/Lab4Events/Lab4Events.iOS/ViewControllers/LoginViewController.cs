@@ -13,8 +13,10 @@ namespace Lab4Events.iOS
         public override void ViewDidLoad() {
             base.ViewDidLoad();
 
-            createAccountButton.Layer.CornerRadius = (nfloat)15.0;
-            loginButton.Layer.CornerRadius = (nfloat)15.0;
+            var buttonContentInsets = new UIEdgeInsets(16, 16, 16, 16);
+            facebookButton.ContentEdgeInsets = buttonContentInsets;
+            googleButton.ContentEdgeInsets = buttonContentInsets;
+            linkedInButton.ContentEdgeInsets = buttonContentInsets;
         }
 
         partial void LoginButton_TouchUpInside(UIButton sender) {

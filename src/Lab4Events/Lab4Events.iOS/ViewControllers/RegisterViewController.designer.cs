@@ -14,5 +14,8 @@ namespace Lab4Events.iOS
     [Register ("RegisterViewController")]
     partial class RegisterViewController
     {
+        void ReleaseDesignerOutlets ()
+        {
+        }
     }
 }
