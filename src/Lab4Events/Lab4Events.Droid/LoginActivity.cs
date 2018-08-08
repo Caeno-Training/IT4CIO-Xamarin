@@ -4,7 +4,8 @@ using Android.OS;
 using Android.Support.V7.App;
 using Android.Widget;
 using Lab4Events.Extensions;
-using Lab4Events.Models;
+using Lab4Events.Core.Services;
+using Lab4Events.Core.Models;
 
 namespace Lab4Events
 {
@@ -33,42 +34,39 @@ namespace Lab4Events
             var loginButton = FindViewById<Button>(Resource.Id.loginButton);
             loginButton.Click += (s, e) =>
             {
+                // Extrai os usuários
                 var username = usernameEditText.Text;
                 var password = passwordEditText.Text;
 
-                if (string.IsNullOrWhiteSpace(username))
-                {
+                //
+                // Validação de entrada dos campos
+                if (string.IsNullOrWhiteSpace(username)) {
                     this.DisplayAlert("Erro", "É necessário digitar seu nome de usuário.");
                     usernameEditText.RequestFocus();
                     return;
                 }
 
-                if (string.IsNullOrWhiteSpace(password))
-                {
+                if (string.IsNullOrWhiteSpace(password)) {
                     this.DisplayAlert("Erro", "É necessário digitar sua senha.");
                     passwordEditText.RequestFocus();
                     return;
                 }
 
-                if (!ValidateLogin(username, password))
-                {
+                //
+                // Usa o serviço para tentar fazer login do usuário
+                var userService = new UserService();
+                var result = userService.Login(username, password);
+                if (!result.Success) {
                     this.DisplayAlert("Erro", "Usuário ou senha inválidos.");
                     return;
                 }
 
-                var user = new User();
-                user.Name = "Usuário da Silva";
-                user.Email = "opa@mano.com";
-
+                var userJson = result.User.AsJson();
                 var intent = new Intent(this, typeof(MainActivity));
-                intent.PutExtra("name", user.Name);
-                intent.PutExtra("email", user.Email);
+                intent.PutExtra("user", userJson);
                 StartActivity(intent);
             };
         }
-
-        static bool ValidateLogin(string username, string password) =>
-            username == "usuario" && password == "123";
-
+        
     }
 }

@@ -9,5 +9,9 @@ namespace Lab4Events.iOS
         public RegisterViewController (IntPtr handle) : base (handle)
         {
         }
+
+        partial void BackButton_TouchUpInside(UIButton sender) {
+            DismissViewController(true, null);
+        }
     }
 }

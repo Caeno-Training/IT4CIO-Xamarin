@@ -2,6 +2,7 @@
 using Android.OS;
 using Android.Support.V7.App;
 using Android.Widget;
+using Lab4Events.Core.Models;
 
 namespace Lab4Events
 {
@@ -20,10 +21,9 @@ namespace Lab4Events
             nameTextView = FindViewById<TextView>(Resource.Id.nameTextView);
             emailTextView = FindViewById<TextView>(Resource.Id.emailTextView);
 
-            var name = Intent.GetStringExtra("name");
-            var email = Intent.GetStringExtra("email");
-            nameTextView.Text = name;
-            emailTextView.Text = email;
+            var user = User.FromJson(Intent.GetStringExtra("user"));
+            nameTextView.Text = user.Name;
+            emailTextView.Text = user.Email;
 		}
 
 	}

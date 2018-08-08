@@ -35,14 +35,14 @@
                                 <state key="normal" title="CRIAR NOVA CONTA">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="1725" kind="show" id="2183"/>
-                                </connections>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <real key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="1725" kind="show" id="2183"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="1209">
                                 <rect key="frame" x="40" y="256" width="295" height="84"/>
@@ -71,7 +71,7 @@
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <real key="value" value="15"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
@@ -83,7 +83,7 @@
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <real key="value" value="15"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
@@ -95,7 +95,7 @@
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <real key="value" value="15"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
@@ -109,17 +109,17 @@
                                 <state key="normal" title="LOGIN">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <connections>
-                                    <action selector="LoginButton_TouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1691"/>
-                                </connections>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <real key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="LoginButton_TouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1691"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OU ENTRE COM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xwy-9X-GbZ">
-                                <rect key="frame" x="123.5" y="461" width="128" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OU ENTRE COM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xwy-9X-GbZ" misplaced="YES">
+                                <rect key="frame" x="123" y="461" width="129.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -150,12 +150,12 @@
                     <connections>
                         <outlet property="createAccountButton" destination="394" id="name-outlet-394"/>
                         <outlet property="emailTextField" destination="1207" id="name-outlet-1207"/>
-                        <outlet property="loginButton" destination="djo-mt-9S1" id="name-outlet-djo-mt-9S1"/>
-                        <outlet property="passwordTextField" destination="1208" id="name-outlet-1208"/>
-                        <segue destination="1718" kind="show" id="t7D-rB-tfY"/>
-                        <outlet property="linkedInButton" destination="SDj-ok-lQR" id="name-outlet-SDj-ok-lQR"/>
                         <outlet property="facebookButton" destination="dgN-P7-UXH" id="name-outlet-dgN-P7-UXH"/>
                         <outlet property="googleButton" destination="Qdk-wr-Et1" id="name-outlet-Qdk-wr-Et1"/>
+                        <outlet property="linkedInButton" destination="SDj-ok-lQR" id="name-outlet-SDj-ok-lQR"/>
+                        <outlet property="loginButton" destination="djo-mt-9S1" id="name-outlet-djo-mt-9S1"/>
+                        <outlet property="passwordTextField" destination="1208" id="name-outlet-1208"/>
+                        <segue destination="1718" kind="show" identifier="home" id="t7D-rB-tfY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -173,12 +173,69 @@
                     <view key="view" contentMode="scaleToFill" id="1719">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5284">
+                                <rect key="frame" x="166.5" y="617" width="41" height="30"/>
+                                <state key="normal" title="Voltar"/>
+                                <connections>
+                                    <action selector="BackButton_TouchUpInside:" destination="1718" eventType="touchUpInside" id="5318"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5285">
+                                <rect key="frame" x="153" y="60" width="68" height="31.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="vfh-Jq-ctr">
+                                <rect key="frame" x="31" y="133" width="214" height="60"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lVN-qK-nqY">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="8jl-KI-aiP"/>
+                                            <constraint firstAttribute="height" constant="60" id="yGp-Wm-89f"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dsK-HJ-gLB">
+                                        <rect key="frame" x="76" y="0.0" width="138" height="46.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome do Usuário" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bgy-J1-AJr">
+                                                <rect key="frame" x="0.0" y="0.0" width="138" height="20.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="usuário@email.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c08-mn-vjd">
+                                                <rect key="frame" x="0.0" y="28.5" width="138" height="18"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5284" firstAttribute="centerX" secondItem="1719" secondAttribute="centerX" id="DsN-J4-RnY"/>
+                            <constraint firstItem="5285" firstAttribute="top" secondItem="1715" secondAttribute="bottom" constant="40" id="Lfc-8h-Dzb"/>
+                            <constraint firstItem="vfh-Jq-ctr" firstAttribute="top" secondItem="5285" secondAttribute="bottom" constant="41.5" id="P2a-dl-fo3"/>
+                            <constraint firstItem="5285" firstAttribute="centerX" secondItem="1719" secondAttribute="centerX" id="Rfv-xV-N0E"/>
+                            <constraint firstItem="vfh-Jq-ctr" firstAttribute="leading" secondItem="1719" secondAttribute="leadingMargin" constant="15" id="cZO-SM-GFE"/>
+                            <constraint firstItem="1716" firstAttribute="top" secondItem="5284" secondAttribute="bottom" constant="20" id="mi7-eM-aPe"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backButton" destination="5284" id="name-outlet-5284"/>
+                        <outlet property="nameLabel" destination="Bgy-J1-AJr" id="name-outlet-Bgy-J1-AJr"/>
+                        <outlet property="emailLabel" destination="c08-mn-vjd" id="name-outlet-c08-mn-vjd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1720" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1002" y="-498"/>
+            <point key="canvasLocation" x="1000.8" y="-498.8006"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="1724">
@@ -191,8 +248,28 @@
                     <view key="view" contentMode="scaleToFill" id="1726">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Criar Usuário" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5286">
+                                <rect key="frame" x="135" y="20" width="105" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5287">
+                                <rect key="frame" x="164" y="318" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Voltar"/>
+                                <connections>
+                                    <action selector="BackButton_TouchUpInside:" destination="1725" eventType="touchUpInside" id="5349"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="backButton" destination="5287" id="name-outlet-5287"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1727" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -201,8 +278,8 @@
     </scenes>
     <resources>
         <image name="Lab4Events" width="205" height="119"/>
-        <image name="Logo_Google" width="30" height="30"/>
         <image name="Logo_Facebook" width="30" height="30"/>
+        <image name="Logo_Google" width="30" height="30"/>
         <image name="Logo_Linkedin" width="30" height="30"/>
     </resources>
 </document>

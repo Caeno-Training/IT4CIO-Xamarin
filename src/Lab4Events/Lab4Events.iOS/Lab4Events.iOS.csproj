@@ -140,5 +140,11 @@
       <DependentUpon>RegisterViewController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Lab4Events.Core\Lab4Events.Core.csproj">
+      <Project>{42BB607B-13D7-404A-8228-6CA5A3440F5E}</Project>
+      <Name>Lab4Events.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

@@ -4,8 +4,8 @@ using Android.OS;
 using Android.Runtime;
 using Android.Support.V7.App;
 using Android.Widget;
+using Lab4Events.Core.Models;
 using Lab4Events.Extensions;
-using Lab4Events.Models;
 
 namespace Lab4Events
 {
