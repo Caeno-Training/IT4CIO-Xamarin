@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:ItacioApp" 
+    x:Class="ItacioApp.MainPage"
+    Title="Itacio"
+    BackgroundColor="WhiteSmoke">
+    <StackLayout>
+        <ListView 
+            x:Name="contactsListView"
+            SeparatorVisibility="None"
+            RowHeight="80">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid BackgroundColor="Transparent">
+                            <Frame 
+                                HasShadow="false"
+                                BorderColor="Silver"
+                                Margin="16,8"
+                                Padding="0">
+                                <Grid ColumnSpacing="0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="80" />
+                                        <ColumnDefinition />
+                                        <ColumnDefinition Width="40" />
+                                    </Grid.ColumnDefinitions>
+                                    
+                                    <Image
+                                        Margin="8,0"
+                                        Source="{Binding Avatar}" />
+                                    
+                                    <StackLayout 
+                                        Grid.Column="1"
+                                        Spacing="0"
+                                        Orientation="Vertical"
+                                        HorizontalOptions="FillAndExpand"
+                                        VerticalOptions="Center">
+                                        <Label 
+                                            FontAttributes="Bold"
+                                            FontSize="Large"
+                                            Text="{Binding Name}" />
+                                        <Label 
+                                            FontSize="Small"
+                                            TextColor="Silver"
+                                            Text="{Binding Email}" />
+                                    </StackLayout>
+                                                                    
+                                    <ContentView
+                                        Grid.Column="2"
+                                        BackgroundColor="Silver">
+                                        <Label
+                                            VerticalOptions="Center"
+                                            HorizontalOptions="Center"
+                                            Rotation="-90"
+                                            FontAttributes="Bold"
+                                            LineBreakMode="NoWrap"
+                                            TextColor="White"
+                                            Text="{Binding Profile}" />
+                                    </ContentView>
+                                </Grid>
+                            </Frame>
+                        </Grid>
+                    </ViewCell>                    
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+    </StackLayout>
+</ContentPage>

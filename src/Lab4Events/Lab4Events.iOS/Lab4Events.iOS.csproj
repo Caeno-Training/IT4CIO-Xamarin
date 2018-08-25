@@ -115,6 +115,7 @@
     <Folder Include="Assets.xcassets\Logo_Facebook.imageset\" />
     <Folder Include="Assets.xcassets\Logo_Linkedin.imageset\" />
     <Folder Include="Assets.xcassets\Likes.imageset\" />
+    <Folder Include="Extensions\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -123,6 +124,7 @@
   <ItemGroup>
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -139,6 +141,7 @@
     <Compile Include="ViewControllers\RegisterViewController.designer.cs">
       <DependentUpon>RegisterViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="Extensions\UIVIewControllerExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Lab4Events.Core\Lab4Events.Core.csproj">
@@ -147,4 +150,5 @@
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <Import Project="..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" />
 </Project>

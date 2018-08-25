@@ -5,7 +5,6 @@ using System.Linq;
 
 namespace Lab4Events.Core.Services
 {
-
     /// <summary>
     /// Representa um serviço com ações que podem ser realizadas para um usuário.
     /// </summary>
@@ -14,7 +13,7 @@ namespace Lab4Events.Core.Services
         /// <summary>
         /// Banco de dados em memória de usuários de testes.
         /// </summary>
-        static List<User> users = new List<User> {
+        static List<User>  users = new List<User> {
             new User { Id = 1, Name = "Jose da Silva", Email = "usuario1@email.com", Phone = "4112341234", PictureUrl = "http://", Password = "123" },
             new User { Id = 2, Name = "Usuário Teste", Email = "teste@email.com", Phone = "4112341234", PictureUrl = "http://", Password = "123" },
             new User { Id = 3, Name = "Popotex Silva", Email = "popoto@it4cio.com", Phone = "4112341234", PictureUrl = "http://", Password = "123" },
@@ -47,11 +46,37 @@ namespace Lab4Events.Core.Services
             return (user == null) ? (false, null) : (true, user);
         }
 
+        // TODO: Completar a documentação do método
         /// <summary>
         /// Registra um novo usuário no sistema.
         /// </summary>
-        public void Register() {
-            // TODO: Implementar o Registro de Usuário
+        /// <returns>The register.</returns>
+        /// <param name="name">Nome completo do usário</param>
+        /// <param name="email">Email.</param>
+        /// <param name="phone">Phone.</param>
+        /// <param name="password">Password.</param>
+        public (bool Success, User User, string ErrorMessage) Register(string name, string email, string phone, string password) {
+            // Validar se o e-mail passado já existe
+            if (users.Any(u => u.Email == email))
+                return (false, null, "Um usuário com esse endereço de e-mail já esta cadastrado.");
+
+            // Validar se o telefone passado já existe
+            if (users.Any(u => u.Phone == phone))
+                return (false, null, "Um usuário com esse telefone já esta cadastrado.");
+
+            // Criar o usuário e inserir na lista
+            var id = users.Max(u => u.Id) + 1;
+            var user = new User {
+                Id = id,
+                Name = name,
+                Email = email,
+                Phone = phone,
+                Password = password,
+            };
+            users.Add(user);
+
+            // Retornar esse usuário
+            return (true, user, null);
         }
         
     }

@@ -13,6 +13,8 @@ namespace Lab4Events
         TextView nameTextView;
         TextView emailTextView;
 
+        User user;
+
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
@@ -21,7 +23,7 @@ namespace Lab4Events
             nameTextView = FindViewById<TextView>(Resource.Id.nameTextView);
             emailTextView = FindViewById<TextView>(Resource.Id.emailTextView);
 
-            var user = User.FromJson(Intent.GetStringExtra("user"));
+            user = User.FromJson(Intent.GetStringExtra("user"));
             nameTextView.Text = user.Name;
             emailTextView.Text = user.Email;
 		}

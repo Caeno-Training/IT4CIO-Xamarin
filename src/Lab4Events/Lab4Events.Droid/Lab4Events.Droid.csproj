@@ -102,6 +102,9 @@
     <PackageReference Include="Xamarin.Android.Support.Design">
       <Version>27.0.2.1</Version>
     </PackageReference>
+    <PackageReference Include="NETStandard.Library">
+      <Version>2.0.3</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\activity_login.axml">

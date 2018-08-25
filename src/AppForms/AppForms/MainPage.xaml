@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:AppForms" 
+    x:Class="AppForms.MainPage"
+    BackgroundColor="WhiteSmoke">
+    <StackLayout>
+        <Label 
+            x:Name="helloLabel"
+            Margin="20"
+            Text="Digite seu nome:"
+            TextColor="Crimson"
+            HorizontalOptions="Start"
+            VerticalOptions="EndAndExpand" />
+        <Entry
+            x:Name="nameEntry"
+            Margin="20,0"
+            Placeholder="Aqui seu nome..." />
+        <Button
+            Clicked="Handle_Clicked"
+            BackgroundColor="Coral"
+            Margin="20"
+            VerticalOptions="StartAndExpand"
+            TextColor="White"
+            Text="Clique em mim, estou carente!" />
+    </StackLayout>
+</ContentPage>

@@ -16,8 +16,7 @@ namespace Lab4Events
         EditText usernameEditText;
         EditText passwordEditText;
 
-        protected override void OnCreate(Bundle savedInstanceState)
-        {
+        protected override void OnCreate(Bundle savedInstanceState) {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_login);
 
@@ -25,15 +24,13 @@ namespace Lab4Events
             passwordEditText = FindViewById<EditText>(Resource.Id.passwordEditText);
 
             var createLoginButton = FindViewById<Button>(Resource.Id.createLoginButton);
-            createLoginButton.Click += (s, e) =>
-            {
+            createLoginButton.Click += (s, e) => {
                 var intent = new Intent(this, typeof(RegisterActivity));
                 StartActivity(intent);
             };
 
             var loginButton = FindViewById<Button>(Resource.Id.loginButton);
-            loginButton.Click += (s, e) =>
-            {
+            loginButton.Click += (s, e) => {
                 // Extrai os usuários
                 var username = usernameEditText.Text;
                 var password = passwordEditText.Text;

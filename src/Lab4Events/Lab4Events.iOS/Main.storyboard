@@ -41,7 +41,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="1725" kind="show" id="2183"/>
+                                    <segue id="7207" destination="6452" kind="show"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="1209">
@@ -238,42 +238,187 @@
             <point key="canvasLocation" x="1000.8" y="-498.8006"/>
         </scene>
         <!--Register View Controller-->
-        <scene sceneID="1724">
+        <scene sceneID="6334">
             <objects>
-                <viewController id="1725" customClass="RegisterViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="1722"/>
-                        <viewControllerLayoutGuide type="bottom" id="1723"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="1726">
+                <tableViewController id="6335" sceneMemberID="viewController" customClass="RegisterViewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="6336">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Criar Usuário" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5286">
-                                <rect key="frame" x="135" y="20" width="105" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5287">
-                                <rect key="frame" x="164" y="318" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Voltar"/>
-                                <connections>
-                                    <action selector="BackButton_TouchUpInside:" destination="1725" eventType="touchUpInside" id="5349"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
+                        <connections>
+                            <outlet property="dataSource" destination="6335" id="6337"/>
+                            <outlet property="delegate" destination="6335" id="6338"/>
+                        </connections>
+                        <sections>
+                            <tableViewSection headerTitle="Nome" id="6359">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="6360">
+                                        <rect key="frame" x="0.0" y="63" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6360" id="6361">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="6362" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Digite seu nome">
+                                                    <rect key="frame" x="15" y="8" width="345" height="30"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint id="6363" firstItem="6362" firstAttribute="top" secondItem="6361" secondAttribute="top" constant="8"/>
+                                                <constraint id="6364" firstItem="6362" firstAttribute="leading" secondItem="6361" secondAttribute="leading" constant="15"/>
+                                                <constraint id="6365" firstItem="6361" firstAttribute="bottom" secondItem="6362" secondAttribute="bottom" constant="6"/>
+                                                <constraint id="6366" firstItem="6361" firstAttribute="trailing" secondItem="6362" secondAttribute="trailing" constant="15"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Email" id="6371">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="6372" rowHeight="45">
+                                        <rect key="frame" x="0.0" y="163" width="375" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6372" id="6373">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="6374" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Digite seu e-mail">
+                                                    <rect key="frame" x="15" y="8" width="345" height="30"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint id="6375" firstItem="6374" firstAttribute="top" secondItem="6373" secondAttribute="top" constant="8"/>
+                                                <constraint id="6376" firstItem="6374" firstAttribute="leading" secondItem="6373" secondAttribute="leading" constant="15"/>
+                                                <constraint id="6377" firstItem="6373" firstAttribute="bottom" secondItem="6374" secondAttribute="bottom" constant="6"/>
+                                                <constraint id="6378" firstItem="6373" firstAttribute="trailing" secondItem="6374" secondAttribute="trailing" constant="15"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Telefone" id="6383">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="6384" rowHeight="45">
+                                        <rect key="frame" x="0.0" y="264" width="375" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6384" id="6385">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="6386" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Digite seu telefone">
+                                                    <rect key="frame" x="15" y="8" width="345" height="30"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint id="6387" firstItem="6386" firstAttribute="top" secondItem="6385" secondAttribute="top" constant="8"/>
+                                                <constraint id="6388" firstItem="6386" firstAttribute="leading" secondItem="6385" secondAttribute="leading" constant="15"/>
+                                                <constraint id="6389" firstItem="6385" firstAttribute="bottom" secondItem="6386" secondAttribute="bottom" constant="6"/>
+                                                <constraint id="6390" firstItem="6385" firstAttribute="trailing" secondItem="6386" secondAttribute="trailing" constant="15"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Senha" id="6399">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="6400" rowHeight="45">
+                                        <rect key="frame" x="0.0" y="365" width="375" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6400" id="6401">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="6402" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Crie uma senha">
+                                                    <rect key="frame" x="15" y="8" width="345" height="30"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint id="6403" firstItem="6402" firstAttribute="top" secondItem="6401" secondAttribute="top" constant="8"/>
+                                                <constraint id="6404" firstItem="6402" firstAttribute="leading" secondItem="6401" secondAttribute="leading" constant="15"/>
+                                                <constraint id="6405" firstItem="6401" firstAttribute="bottom" secondItem="6402" secondAttribute="bottom" constant="6"/>
+                                                <constraint id="6406" firstItem="6401" firstAttribute="trailing" secondItem="6402" secondAttribute="trailing" constant="15"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="6407" rowHeight="45">
+                                        <rect key="frame" x="0.0" y="410" width="375" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6407" id="6408">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="6409" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Confirme sua senha">
+                                                    <rect key="frame" x="15" y="8" width="345" height="30"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint id="6410" firstItem="6409" firstAttribute="top" secondItem="6408" secondAttribute="top" constant="8"/>
+                                                <constraint id="6411" firstItem="6409" firstAttribute="leading" secondItem="6408" secondAttribute="leading" constant="15"/>
+                                                <constraint id="6412" firstItem="6408" firstAttribute="bottom" secondItem="6409" secondAttribute="bottom" constant="6"/>
+                                                <constraint id="6413" firstItem="6408" firstAttribute="trailing" secondItem="6409" secondAttribute="trailing" constant="15"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                    </tableView>
+                    <navigationItem title="Criar Usuário" id="6561" key="navigationItem">
+                        <barButtonItem key="leftBarButtonItem" id="6620" systemItem="cancel">
+                            <connections>
+                                <action selector="CancelButton_Activated:" destination="6335" id="7612"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" id="6683" systemItem="done">
+                            <connections>
+                                <action selector="ConfirmButton_Activated:" destination="6335" id="7682"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="backButton" destination="5287" id="name-outlet-5287"/>
+                        <outlet property="nameTextField" destination="6362" id="name-outlet-6362"/>
+                        <outlet property="emailTextField" destination="6374" id="name-outlet-6374"/>
+                        <outlet property="phoneTextField" destination="6386" id="name-outlet-6386"/>
+                        <outlet property="passwordTextField" destination="6402" id="name-outlet-6402"/>
+                        <outlet property="passwordRepeatTextField" destination="6409" id="name-outlet-6409"/>
+                        <outlet property="confirmButton" destination="6683" id="name-outlet-6683"/>
+                        <outlet property="cancelButton" destination="6620" id="name-outlet-6620"/>
+                        <segue id="7828" destination="1718" kind="show" identifier="home"/>
                     </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1727" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6341" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1001" y="304"/>
+            <point key="canvasLocation" x="1517" y="273"/>
+        </scene>
+        <scene sceneID="6451">
+            <objects>
+                <navigationController id="6452" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6454">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue id="6562" destination="6335" kind="relationship" relationship="rootViewController"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6455" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="999" y="274"/>
         </scene>
     </scenes>
     <resources>

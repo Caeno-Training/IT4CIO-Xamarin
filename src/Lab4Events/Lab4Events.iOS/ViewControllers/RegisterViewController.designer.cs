@@ -16,17 +16,75 @@ namespace Lab4Events.iOS
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton backButton { get; set; }
+        UIKit.UIBarButtonItem cancelButton { get; set; }
 
-        [Action ("BackButton_TouchUpInside:")]
+        [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        partial void BackButton_TouchUpInside (UIKit.UIButton sender);
+        UIKit.UIBarButtonItem confirmButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField emailTextField { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField nameTextField { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField passwordRepeatTextField { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField passwordTextField { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField phoneTextField { get; set; }
+
+        [Action ("CancelButton_Activated:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void CancelButton_Activated (UIKit.UIBarButtonItem sender);
+
+        [Action ("ConfirmButton_Activated:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void ConfirmButton_Activated (UIKit.UIBarButtonItem sender);
 
         void ReleaseDesignerOutlets ()
         {
-            if (backButton != null) {
-                backButton.Dispose ();
-                backButton = null;
+            if (cancelButton != null) {
+                cancelButton.Dispose ();
+                cancelButton = null;
+            }
+
+            if (confirmButton != null) {
+                confirmButton.Dispose ();
+                confirmButton = null;
+            }
+
+            if (emailTextField != null) {
+                emailTextField.Dispose ();
+                emailTextField = null;
+            }
+
+            if (nameTextField != null) {
+                nameTextField.Dispose ();
+                nameTextField = null;
+            }
+
+            if (passwordRepeatTextField != null) {
+                passwordRepeatTextField.Dispose ();
+                passwordRepeatTextField = null;
+            }
+
+            if (passwordTextField != null) {
+                passwordTextField.Dispose ();
+                passwordTextField = null;
+            }
+
+            if (phoneTextField != null) {
+                phoneTextField.Dispose ();
+                phoneTextField = null;
             }
         }
     }

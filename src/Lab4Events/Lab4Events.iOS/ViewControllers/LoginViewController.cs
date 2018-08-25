@@ -3,6 +3,7 @@ using System;
 using UIKit;
 using Lab4Events.Core.Services;
 using Lab4Events.Core.Models;
+using Lab4Events.iOS.Extensions;
 
 namespace Lab4Events.iOS
 {
@@ -46,9 +47,7 @@ namespace Lab4Events.iOS
             }
 
             // Notifica o usuário que é um login inválido
-            var alertController = UIAlertController.Create("Login Inválido",  "Digite um e-mail e senha válidos.", UIAlertControllerStyle.Alert);
-            alertController.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Cancel, null));
-            PresentViewController(alertController, true, null);
+            this.DisplayAlert("Login inválido", "Digite um e-mail e senha válidos.");
         }
     }
 }
