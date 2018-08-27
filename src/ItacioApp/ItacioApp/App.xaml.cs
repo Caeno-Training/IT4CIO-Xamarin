@@ -1,6 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using ItacioApp.Pages;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace ItacioApp
@@ -11,8 +12,8 @@ namespace ItacioApp
             InitializeComponent();
 
             var mainPage = new MainPage();
-            var navigationPage = new NavigationPage(mainPage);
-            MainPage = navigationPage;
+            //var navigationPage = new NavigationPage(mainPage);
+            MainPage = mainPage; //navigationPage;
         }
 
         protected override void OnStart() {

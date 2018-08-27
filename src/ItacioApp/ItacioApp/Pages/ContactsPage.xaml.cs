@@ -8,9 +8,9 @@ using ItacioApp.Models;
 
 namespace ItacioApp
 {
-    public partial class MainPage : ContentPage
+    public partial class ContactsPage : ContentPage
     {
-        public MainPage() {
+        public ContactsPage() {
             InitializeComponent();
 
             var list = new List<Contact> {
@@ -19,6 +19,10 @@ namespace ItacioApp
                 new Contact { Name = "Teste 3", Avatar = "contact_picture", Email = "teste3@teste.com", Profile = "CON" },
             };
             contactsListView.ItemsSource = list;
+        }
+
+        public void Handle_Clicked(object sender, EventArgs e) {
+            Navigation.PopModalAsync();
         }
     }
 }

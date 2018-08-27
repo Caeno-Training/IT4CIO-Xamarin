@@ -3,9 +3,15 @@
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:local="clr-namespace:ItacioApp" 
-    x:Class="ItacioApp.MainPage"
+    x:Class="ItacioApp.ContactsPage"
     Title="Itacio"
     BackgroundColor="WhiteSmoke">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem 
+            Clicked="Handle_Clicked"
+            Order="Primary"
+            Text="Voltar" />
+    </ContentPage.ToolbarItems>
     <StackLayout>
         <ListView 
             x:Name="contactsListView"

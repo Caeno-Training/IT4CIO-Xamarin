@@ -142,6 +142,8 @@
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\contact_picture.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\contact_picture.imageset\icon-professional.png" />
+    <ImageAsset Include="Assets.xcassets\logo.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\logo.imageset\pentagrama.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -161,5 +163,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets.xcassets\contact_picture.imageset\" />
+    <Folder Include="Assets.xcassets\logo.imageset\" />
   </ItemGroup>
 </Project>
