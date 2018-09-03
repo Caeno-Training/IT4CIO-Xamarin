@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Application 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="FlexLayoutDemo.App">
+    <Application.Resources>
+        <Color x:Key="defaultTextColor">Red</Color>
+        
+        <Style x:Key="defaultText" TargetType="Label">
+            <Setter Property="FontSize" Value="Small" />
+            <Setter Property="TextColor" Value="{StaticResource defaultTextColor}" />
+        </Style>
+    </Application.Resources>
+</Application>

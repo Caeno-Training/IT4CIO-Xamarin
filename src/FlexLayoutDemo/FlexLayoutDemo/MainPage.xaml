@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:FlexLayoutDemo" 
+    x:Class="FlexLayoutDemo.MainPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <StyleSheet Source="styles.css" />
+            <StyleSheet>
+                <![CDATA[
+                stacklayout button {
+                    background-color: cadetblue;
+                    color: white;
+                    font-style: bold;
+                }
+                ]]>
+            </StyleSheet>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <FlexLayout
+        Margin="32,0"
+        Direction="Column"
+        JustifyContent="SpaceEvenly"
+        Wrap="Wrap">
+        
+        <Label 
+            StyleId="titleLabel"
+            Text="Welcome to Xamarin.Forms!" />
+        
+        <Label
+            Style="{StaticResource defaultText}"
+            Text="Bem-vindo ao aplicativo. Selecione uma das opções abaixo." />
+        
+        <StackLayout>
+            <Button
+                Text="Opção 1" />
+            
+            <Button
+                Text="Opção 2" />
+            
+            <Button
+                Text="Opção 3" />
+        </StackLayout>
+        
+        <Button
+            BackgroundColor="Red"
+            Text="Sair" />
+                
+    </FlexLayout>
+    
+</ContentPage>
