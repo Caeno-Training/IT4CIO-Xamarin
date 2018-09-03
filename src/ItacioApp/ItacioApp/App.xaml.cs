@@ -12,8 +12,7 @@ namespace ItacioApp
             InitializeComponent();
 
             var mainPage = new MainPage();
-            //var navigationPage = new NavigationPage(mainPage);
-            MainPage = mainPage; //navigationPage;
+            MainPage = mainPage;
         }
 
         protected override void OnStart() {

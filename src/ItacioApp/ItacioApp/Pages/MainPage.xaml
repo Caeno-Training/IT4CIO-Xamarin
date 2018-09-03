@@ -20,7 +20,8 @@
             Text="Cadastre-se" />
         
         <Button 
-            Clicked="Handle_Clicked"
+            BackgroundColor="Transparent"
+            Clicked="ShowListClicked"
             TextColor="DarkGray"
             Text="Veja a lista" />
     </StackLayout>

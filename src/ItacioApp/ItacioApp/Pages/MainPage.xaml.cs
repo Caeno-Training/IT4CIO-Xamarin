@@ -2,29 +2,42 @@
 using System.Collections.Generic;
 
 using Xamarin.Forms;
+using System.Threading.Tasks;
 
 namespace ItacioApp.Pages
 {
     public partial class MainPage : ContentPage
     {
+        bool isAnimating;
+
         public MainPage() {
             InitializeComponent();
         }
 
         protected override void OnAppearing() {
             base.OnAppearing();
-            Animate();
+            StartAnimation();
         }
 
-        async void Animate() {
+        async void StartAnimation() {
+            isAnimating = true;
+            while (isAnimating) {
+                logoImage.Rotation = 0;
+                await logoImage.RotateTo(360, 10000);
+            }
+        }
+
+        void StopAnimation() {
+            isAnimating = false;
             logoImage.Rotation = 0;
-            await logoImage.RotateTo(720, 20000);
         }
 
-        public void Handle_Clicked(object sender, EventArgs e) {
+        public async void ShowListClicked(object sender, EventArgs e) {
             var contactsPage = new ContactsPage();
             var navigationPage = new NavigationPage(contactsPage);
-            Navigation.PushModalAsync(navigationPage);
+            await Navigation.PushModalAsync(navigationPage);
+
+            StopAnimation();
         }
     }
 }
