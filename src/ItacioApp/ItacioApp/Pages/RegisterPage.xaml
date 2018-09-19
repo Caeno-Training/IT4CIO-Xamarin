@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ItacioApp.Pages.RegisterPage"
+    Title="Cadastro"
+    BackgroundColor="{StaticResource mainColor}">
+    <ContentPage.Resources>
+        <StyleSheet>
+            <![CDATA[
+            
+            flexlayout entry {
+                margin-top: 20;
+            }
+            flexlayout picker {
+                margin-top: 20;
+            }
+            
+            ]]>
+        </StyleSheet>
+    </ContentPage.Resources>
+    
+    <FlexLayout 
+        Margin="20"
+        Direction="Column"
+        JustifyContent="SpaceEvenly">
+        
+        <BoxView 
+            FlexLayout.Basis="30%"
+            Color="Bisque" />
+        
+        <BoxView 
+            FlexLayout.Grow="1"
+            Color="Transparent" />
+        
+        <Entry
+            Placeholder="Nome" />
+        
+        <Entry
+            Placeholder="E-mail" />
+        
+        <StackLayout Orientation="Horizontal">
+            <Entry 
+                Placeholder="Senha"
+                IsPassword="true"
+                HorizontalOptions="FillAndExpand" />
+            <Entry 
+                Placeholder="Repita"
+                IsPassword="true"
+                HorizontalOptions="FillAndExpand" />
+        </StackLayout>
+        
+        <Picker>
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>CIO</x:String>
+                    <x:String>PAT</x:String>
+                    <x:String>ACP</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        
+        <BoxView 
+            FlexLayout.Grow="1"
+            Color="Transparent" />
+        
+        <ContentView>
+            <Button
+                VerticalOptions="Center"
+                Style="{StaticResource defaultButton}"
+                Text="GO!" />
+        </ContentView>
+        
+    </FlexLayout>
+</ContentPage>

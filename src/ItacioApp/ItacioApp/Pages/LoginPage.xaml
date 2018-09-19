@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    x:Class="ItacioApp.Pages.LoginPage"
+    Title="Login"
+    BackgroundColor="{StaticResource mainColor}">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem 
+            Clicked="BackClicked"
+            Order="Primary"
+            Text="Voltar" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Resources>
+        <StyleSheet Source="../styles.css" />
+    </ContentPage.Resources>
+    <FlexLayout 
+        Direction="Column"
+        JustifyContent="SpaceEvenly">
+        
+        <ffimageloadingsvg:SvgCachedImage
+            FlexLayout.AlignSelf="Center"
+            WidthRequest="60"
+            HeightRequest="60"
+            Source="resource://ItacioApp.Resources.white_star.svg" />
+                
+        <StackLayout 
+            Spacing="24"
+            Margin="24,0">
+            <Entry 
+                Keyboard="Email"
+                Placeholder="E-mail" />
+            <Entry 
+                IsPassword="true"
+                Placeholder="Senha" />
+        </StackLayout>
+        
+        <Button
+            Clicked="LoginClicked"
+            CornerRadius="20"
+            StyleClass="defaultButton"
+            Text="Login" />
+        
+    </FlexLayout>
+    
+</ContentPage>

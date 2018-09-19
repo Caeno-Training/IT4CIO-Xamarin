@@ -1,5 +1,17 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ItacioApp.App">
+<?xml version="1.0" encoding="utf-8"?>
+<Application 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="ItacioApp.App">
     <Application.Resources>
+        <Color x:Key="mainColor">DarkCyan</Color>
+        
+        <Style x:Key="defaultButton" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="White" />
+            <Setter Property="CornerRadius" Value="20" />
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="Margin" Value="20" />
+            <Setter Property="TextColor" Value="{StaticResource mainColor}" />
+        </Style>
     </Application.Resources>
 </Application>
