@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="BindingEx.Pages.ProfilePage"
+    Title="Meu Perfil">
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="Margin" Value="0,24,0,0" />
+        </Style>    
+    </ContentPage.Resources>
+    
+    <StackLayout
+        Padding="16,0">
+        
+        <Label
+            Text="Nome" />
+        <Entry
+            IsTextPredictionEnabled="false"
+            Placeholder="Digite seu nome"
+            Text="{Binding Name}" />
+        
+        <Label
+            Text="Email" />
+        <Entry
+            Keyboard="Email"
+            Placeholder="Digite seu email"
+            Text="{Binding Email}" />
+        
+        <Label
+            Text="Data de Nascimento" />
+        <DatePicker
+            Date="{Binding Birthday}" />
+        
+        <Label 
+            Text="Bio" />
+        <Frame 
+            HasShadow="false"
+            BorderColor="Silver"
+            HeightRequest="250"
+            Padding="0">
+            <Editor
+                Text="{Binding Bio}" />
+        </Frame>
+        
+        <Button
+            Clicked="Handle_Clicked"
+            BackgroundColor="SeaGreen"
+            Margin="0,24,0,0"
+            TextColor="White"
+            Text="Salvar" />
+    </StackLayout>
+</ContentPage>
