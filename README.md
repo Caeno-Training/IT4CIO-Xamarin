@@ -14,6 +14,11 @@ Os projetos desenvolvidos durante as aulas estão disponíveis para pesquisa na 
 # Referências
 Referências e materiais complementares aos conteúdos ministrados em aula.
 
+## Distribuição de Apps
+
+* [Guia de Empacotamento de Apps Android](https://docs.microsoft.com/en-us/xamarin/android/deploy-test/release-prep/?tabs=vswin)
+* [Guia de Empacotamento de Apps iOS](https://docs.microsoft.com/en-us/xamarin/ios/deploy-test/)
+
 ## Xamarin.Forms
 * [Repositório do Xamarin.Forms no GitHub](https://github.com/xamarin/Xamarin.Forms)
 * [Data Binding](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/data-binding/): documentação oficial do recurso de Data Binding.
